@@ -28,7 +28,7 @@ export default function SelectedContact({
     <>
       {contact && (
         <div className="selected-contact">
-          <p>{contact.name}</p>
+          <p className="name">{contact.name}</p>
           <p>{contact.email}</p>
           <p>{contact.address.city}</p>
           <p>{contact.address.zipcode}</p>
