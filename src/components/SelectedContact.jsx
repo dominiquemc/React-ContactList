@@ -20,6 +20,10 @@ export default function SelectedContact({
     }
     myContacts();
   }, [selectedContactId]);
+
+  function refreshPage() {
+    window.location.reload(false);
+  }
   return (
     <>
       {contact && (
@@ -29,7 +33,7 @@ export default function SelectedContact({
           <p>{contact.address.city}</p>
           <p>{contact.address.zipcode}</p>
           <p>{contact.website}</p>
-          <button>Back</button>
+          <button onClick={refreshPage}>Back</button>
         </div>
       )}
     </>
