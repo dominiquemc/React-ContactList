@@ -9,10 +9,16 @@ export default function App() {
     <>
       {selectedContactId ? (
         <div>
-          <SelectedContact selectedContactId={selectedContactId} />
+          <SelectedContact
+            selectedContactId={selectedContactId}
+            setSelectedContactId={setSelectedContactId}
+          />
         </div>
       ) : (
-        <ContactList setSelectedContactId={setSelectedContactId} />
+        <ContactList
+          setSelectedContactId={setSelectedContactId}
+          selectedContactId={selectedContactId}
+        />
       )}
     </>
   );
