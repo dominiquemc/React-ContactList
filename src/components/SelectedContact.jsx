@@ -21,8 +21,8 @@ export default function SelectedContact({
     myContacts();
   }, [selectedContactId]);
 
-  function refreshPage() {
-    window.location.reload(false);
+  function handleOnClick() {
+    setSelectedContactId(null);
   }
   return (
     <>
@@ -33,7 +33,7 @@ export default function SelectedContact({
           <p>{contact.address.city}</p>
           <p>{contact.address.zipcode}</p>
           <p>{contact.website}</p>
-          <button onClick={refreshPage}>Back</button>
+          <button onClick={handleOnClick}>Back</button>
         </div>
       )}
     </>
